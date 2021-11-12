@@ -286,4 +286,5 @@ Xem thêm các mã khác tại: [Microsoft Code Page Identifiers](https://docs.m
 <br/>
 
 <br/>
-<center><a href="https://lavenes.com/">Designed by Lavenes in Ho Chi Minh city.</a></center>
+
+[Designed by Lavenes in Ho Chi Minh city.](https://lavenes.com/)
