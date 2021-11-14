@@ -1,0 +1,5 @@
+*.exe
+*.bat
+main.c
+./.vscode/
+./.vscode

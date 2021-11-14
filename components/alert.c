@@ -6,7 +6,9 @@
 #include "alert.h"
 #include <stdio.h>
 #include <windows.h>
-#include "../lavenes.h"
+#include "../libs/process.h"
+#include "../libs/ui.h"
+#include "./button.h"
 
 void AlertElement(Alert alert) {
     //Vẽ title bar

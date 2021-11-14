@@ -7,7 +7,8 @@
 #include <stdio.h>
 #include <windows.h>
 #include <conio.h>
-#include "../lavenes.h"
+#include "../libs/process.h"
+#include "../libs/ui.h"
 
 //Header bar
 void headerBar(char title[], int consoleWidth) {

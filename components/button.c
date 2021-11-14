@@ -6,7 +6,8 @@
 #include "button.h"
 #include <stdio.h>
 #include <windows.h>
-#include "../lavenes.h"
+#include "../libs/process.h"
+#include "../libs/ui.h"
 
 //Vẽ button tại tọa  độ xy với chiều dài và chiều rộng cùng code page và màu
 //Align 0: left; 1: center; 2: right

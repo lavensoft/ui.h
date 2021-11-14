@@ -6,7 +6,8 @@
 #include "radioBox.h"
 #include <stdio.h>
 #include <windows.h>
-#include "../lavenes.h"
+#include "../libs/process.h"
+#include "../libs/ui.h"
 
 //Vẽ RadioBox tại tọa độ xy
 void RadioBoxElement(RadioBox radioBox) {

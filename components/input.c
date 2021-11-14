@@ -6,7 +6,8 @@
 #include "input.h"
 #include <stdio.h>
 #include <windows.h>
-#include "../lavenes.h"
+#include "../libs/process.h"
+#include "../libs/ui.h"
 
 //Vẽ textbox tại tọa độ xy
 void InputElement(Input input) {
