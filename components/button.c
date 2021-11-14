@@ -6,7 +6,7 @@
 #include "button.h"
 #include <stdio.h>
 #include <windows.h>
-#include "../libs/ui.h"
+#include "../lavenes.h"
 
 //Vẽ button tại tọa  độ xy với chiều dài và chiều rộng cùng code page và màu
 //Align 0: left; 1: center; 2: right
@@ -26,9 +26,9 @@ void ButtonElement(Button btn) {
 
     //Tính toán tọa độ căn ngang
     if(btn.align == 1) { //Center
-        titleX = (btn.width - strlen(btn.title)) / 2 + btn.x; //Tính toán tọa độ căn giữa
+        titleX = (btn.width - strlen_utf8(btn.title)) / 2 + btn.x; //Tính toán tọa độ căn giữa
     }else if(btn.align == 2) { //Right
-        titleX = (btn.width - strlen(btn.title) - 1) + btn.x; //Tính toán tọa độ căn trái
+        titleX = (btn.width - strlen_utf8(btn.title) - 1) + btn.x; //Tính toán tọa độ căn trái
     }else{ //Left
         titleX = btn.x + 1;
     }

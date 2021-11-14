@@ -6,8 +6,7 @@
 #include "alert.h"
 #include <stdio.h>
 #include <windows.h>
-#include "../libs/ui.h"
-#include "./button.h"
+#include "../lavenes.h"
 
 void AlertElement(Alert alert) {
     //Vẽ title bar
@@ -17,7 +16,7 @@ void AlertElement(Alert alert) {
     square(alert.x, alert.y, alertEndX, alertEndY, alert.titleBarColor);
 
     //Viết title lên title bar
-    int titleX = (alert.width - strlen(alert.title)) / 2 + alert.x;
+    int titleX = (alert.width - strlen_utf8(alert.title)) / 2 + alert.x;
     int titleY = alert.y;
 
     draw(alert.title, titleX, titleY, alert.titleColor, alert.codePage);
@@ -30,7 +29,7 @@ void AlertElement(Alert alert) {
 
     //Viết content lên alert
     //Tính toán căn giữa form
-    int contentX = (alert.width - strlen(alert.content)) / 2 + alert.x;
+    int contentX = (alert.width - strlen_utf8(alert.content)) / 2 + alert.x;
     int contentY = (alert.height - 3) / 2 + alert.y + 1;
 
     draw(alert.content, contentX, contentY, alert.contentColor, alert.codePage);

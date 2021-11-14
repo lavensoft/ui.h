@@ -7,8 +7,7 @@
 #include <stdio.h>
 #include <windows.h>
 #include <conio.h>
-#include "../libs/ui.h"
-#include "../libs/mouse.h"
+#include "../lavenes.h"
 
 //Header bar
 void headerBar(char title[], int consoleWidth) {
@@ -24,7 +23,7 @@ void headerBar(char title[], int consoleWidth) {
     printf(" [x] ");
 
     //Draw title
-    gotoXY((consoleWidth / 2) - (strlen(title) / 2), 0);
+    gotoXY((consoleWidth / 2) - (strlen_utf8(title) / 2), 0);
     printf("%s", title);
 
     //Chuyển console về mặc định

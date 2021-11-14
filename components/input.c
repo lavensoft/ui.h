@@ -6,7 +6,7 @@
 #include "input.h"
 #include <stdio.h>
 #include <windows.h>
-#include "../libs/ui.h"
+#include "../lavenes.h"
 
 //Vẽ textbox tại tọa độ xy
 void InputElement(Input input) {
@@ -16,7 +16,7 @@ void InputElement(Input input) {
     draw(input.label, input.x, input.y, input.labelColor, input.codePage);
 
     //Tính toán tọa độ xy cho input
-    int inputX = input.x + strlen(input.label) + 1;
+    int inputX = input.x + strlen_utf8(input.label) + 1;
     int inputY = input.y;
     int inputWidth = (inputX + input.width);
 
@@ -32,9 +32,9 @@ void InputElement(Input input) {
 
     //Tính toán tọa độ căn ngang
     if(input.align == 1) { //Center
-        titleX = (inputWidth - strlen(input.value) + inputX) / 2; //Tính toán tọa độ căn giữa
+        titleX = (inputWidth - strlen_utf8(input.value) + inputX) / 2; //Tính toán tọa độ căn giữa
     }else if(input.align == 2) { //Right
-        titleX = (inputWidth - strlen(input.value)); //Tính toán tọa độ căn trái
+        titleX = (inputWidth - strlen_utf8(input.value)); //Tính toán tọa độ căn trái
     }else{ //Left
         titleX = inputX;
     }
