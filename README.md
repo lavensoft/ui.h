@@ -1,11 +1,11 @@
 # UI.h - C/C++ UI Library
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://lavenes.com)
 ## Mô tả
----
+
 Thư viện giúp bạn xây dựng UI trong console với C và C++ dành cho thành viên tại [FPT Polytechnic](https://caodang.fpt.edu.vn/) được phát triển bởi [Quang Nhật](https://www.facebook.com/nhatsdevil.mc).
 
 <br/>
-<center><img src="https://i.imgur.com/XnuuaOM.png"></center>
+<center><img src="https://i.imgur.com/bqZBMZC.png"></center>
 <br/>
 
 ## Documents
@@ -138,13 +138,14 @@ headerBar(title, width);
 //Khai báo cấu hình Radio Box
 //Cách 1
 RadioBox radio; 
-radio.label = "Tiêu đề radio  box";
 radio.x = 0; //Tọa độ  x
 radio.y = 0; //Tọa độ y
 radio.labelColor = 240; //Màu cho label
 radio.boxColor = 240; //Màu cho Radio box
 radio.checked = true; //Trạng thái cho radio box cho check  hay không
 radio.codePage = 437; //Code page cho radio box
+
+strcpy(radio.label, "Label radio box"); //Label cho Radio box
 
 //Cách 2
 //RadioBox radio = {title, x, y, labelColor, boxColor, checked, codePage};
@@ -161,7 +162,6 @@ RadioBoxElement(radio);
 //Khai báo cấu hình Button
 //Cách 1
 Button btn;
-btn.title = "Tiêu đề button"; //Tiêu đề Button
 btn.x = 0; //Tọa độ x
 btn.y = 0; //Tọa độ y
 btn.width = 100; //Độ dài button
@@ -169,6 +169,8 @@ btn.height = 1; //Độ rộng button
 btn.color = 240; //Màu cho button
 btn.align = 1; //Align cho  button- 0: Left, 1: Center, 2: Right
 btn.codePage = 437; //Codepage cho Button
+
+strcpy.title("Tiêu đề button"); //Nội dung cho button
 
 //Cách 2
 //Button btn = {title, x, y, width, height, color, align, codePage};
@@ -185,8 +187,6 @@ ButtonElement(btn);
 //Khai báo cấu hình Textbox
 //Cách 1
 Input textbox;
-textbox.label = "Label"; //Label cho Textbox
-textbox.value = "Hello"; //Value cho Textbox
 textbox.x = 0; //Tọa độ x
 textbox.y = 0; //Tọa độ y
 textbox.width = 10; //Độ dài Textbox
@@ -194,6 +194,8 @@ textbox.labelColor = 15; //Màu cho label
 textbox.inputColor = 240; //Màu cho Textbox
 textbox.align = 0; //Align cho Textbox: 0-Left; 1-Center; 2-Right
 textbox.codePage = 437; //Codepage cho Textbox
+
+strcpy(textbox.label, "Label"); //Label cho Textbox
 
 //Cách 2
 //Input textbox = {label, value, x, y, width, labelColor, inputColor, align, codePage};
@@ -210,8 +212,6 @@ InputElement(textbox);
 //Khai báo cấu hình  Alert
 //Cách 1
 Alert alert;
-alert.title = "Tieu de"; //Tiêu  đề cho title bar
-alert.content = "Noi dung"; //Nội dung cho Alert 
 alert.x = 0; //Tọa độ x
 alert.y = 0; //Tọa độ y
 alert.width = 20; //Chiều dài
@@ -221,6 +221,9 @@ alert.titleBarColor = 159; //Màu background title bar
 alert.contentColor = 240; //Màu cho nội dung
 alert.backgroundColor = 240; //Màu background cho nội dung
 alert.codePage = 437; //Codepage
+
+strcpy(alert.title, "Tieu de") //Tiêu  đề cho title bar 
+strcpy(alert.content, "Noi dung") //Nội dung cho Alert 
 
 //Cách 2
 //Alert alert = {title, content, x, y, width, height, titleColor, titleBarColor, contentColor, backgroundColor, codePage};
