@@ -12,7 +12,7 @@
 //Vẽ RadioBox tại tọa độ xy
 void RadioBoxElement(RadioBox radioBox) {
     //Vẽ box tại tọa độ x,y
-    if(radioBox.checked) { //isChecked
+    if(radioBox.checked == 1) { //isChecked
         draw("[x]", radioBox.x, radioBox.y, radioBox.boxColor, 437);
     }else{
         draw("[ ]", radioBox.x, radioBox.y, radioBox.boxColor, 437);

@@ -142,7 +142,7 @@ radio.x = 0; //Tọa độ  x
 radio.y = 0; //Tọa độ y
 radio.labelColor = 240; //Màu cho label
 radio.boxColor = 240; //Màu cho Radio box
-radio.checked = true; //Trạng thái cho radio box cho check  hay không
+radio.checked = 1; //Trạng thái cho radio box cho check  hay không 0: không, 1: có
 radio.codePage = 437; //Code page cho radio box
 
 strcpy(radio.label, "Label radio box"); //Label cho Radio box
